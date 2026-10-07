@@ -4,6 +4,9 @@ import svgr from "vite-plugin-svgr";
 import path from "path";
 
 export default defineConfig({
+  // The exported project keeps its Supabase environment file in this folder.
+  // Vite still supports root-level Cloudflare Pages variables as usual.
+  envDir: "./supabase",
   plugins: [
     react(),
     svgr({
